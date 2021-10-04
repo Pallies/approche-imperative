@@ -16,9 +16,7 @@ public class SommeDeTableaux {
 	public static void additionTable() {
 	
 		for (int i = 0; i < tabAdd.length; i++) {
-		
 				tabAdd[i] = tab1[i] + tab2[i];
-			
 		}
 	}
 
