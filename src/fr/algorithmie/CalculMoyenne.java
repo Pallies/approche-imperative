@@ -7,7 +7,8 @@ public class CalculMoyenne {
 	static ArrayList<Integer> arrayInteger = new ArrayList<Integer>();
 
 	public static void main(String[] args) {
-		System.out.println(moyenneFromReduce());
+		System.out.println("moyenne via reduce " +moyenneFromReduce());
+		System.out.println("moyenne :"+moyenne());
 	}
 
 	/**

@@ -16,10 +16,10 @@ public class InversionContenu {
 //		Afficher l’ensemble des éléments des 2 tableaux
 		System.out.println("Afficher l’ensemble des éléments des 2 tableaux");
 		for (int i=0;i<array.length;i++) {
-			System.out.println(" tableau ARRAY");
-			System.out.println(array[i]+"\n");
-			System.out.println(" tableau ARRAY COPY");
-			System.out.println(arrayCopy[i]+"\n");
+			System.out.print(" tableau ARRAY ");
+			System.out.print(array[i]+"\n");
+			System.out.print(" tableau ARRAY COPY ");
+			System.out.print(arrayCopy[i]+"\n");
 		}
 	}
 }
