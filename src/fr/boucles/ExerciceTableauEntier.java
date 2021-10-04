@@ -1,6 +1,10 @@
 package fr.boucles;
 
 import java.util.ArrayList;
+<<<<<<< HEAD
+=======
+import java.util.stream.Stream;
+>>>>>>> edcffb01799bfe6c6886911a4042fb5e306d029f
 
 public class ExerciceTableauEntier {
 
