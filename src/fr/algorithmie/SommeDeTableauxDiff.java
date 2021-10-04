@@ -8,6 +8,8 @@ public class SommeDeTableauxDiff {
 
 	public static void main(String[] args) {
 		additionTable();
+		
+//		affichage
 		for(int i=0;i<tabAdd.length;i++) {
 			System.out.print(tabAdd[i]+" ");			
 		}
@@ -15,8 +17,10 @@ public class SommeDeTableauxDiff {
 	}
 
 	public static void additionTable() {
+//		initialise le tableau
 		int tabLength = tab1.length >= tab2.length ? tab1.length : tab2.length;
 		tabAdd = new int[tabLength];
+//		affectation
 		for (int i = 0; i < tabLength; i++) {
 			if (i >= tab1.length) {
 				tabAdd[i] = tab2[i];
