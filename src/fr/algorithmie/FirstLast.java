@@ -6,13 +6,13 @@ public class FirstLast {
 	static int[] array3 = {1, 15, -3, 8, 0, 14, 6} ;
 	static int[] array4 = {} ;
 	public static void main(String[] args) {
-		System.out.println(" reponse : "+ controlFirstLast6(array1));
-		System.out.println(" reponse : "+ controlFirstLast6(array2));
-		System.out.println(" reponse : "+ controlFirstLast6(array3));
-		System.out.println(" reponse : "+ controlFirstLast6(array4));
+		System.out.println(" reponse : "+ controlFirstLast(array1));
+		System.out.println(" reponse : "+ controlFirstLast(array2));
+		System.out.println(" reponse : "+ controlFirstLast(array3));
+		System.out.println(" reponse : "+ controlFirstLast(array4));
 
 	}
-	public static boolean controlFirstLast6(int[] array) {
+	public static boolean controlFirstLast(int[] array) {
 		return array.length > 0 && array[0] ==  array[array.length-1];
 	}
 
