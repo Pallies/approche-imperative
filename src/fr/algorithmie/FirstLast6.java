@@ -8,6 +8,7 @@ public class FirstLast6 {
 	static int[] array4 = {} ;
 	 
 	static FirstLastLambda firstLast = array->array.length > 0 && (array[0] == 6 || array[array.length-1] == 6);
+	
 	public static void main(String[] args) {
 		System.out.println(" reponse : "+ controlFirstLast6(array1));
 		System.out.println(" reponse : "+ controlFirstLast6(array2));
