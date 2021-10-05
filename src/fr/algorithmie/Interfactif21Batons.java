@@ -9,7 +9,9 @@ public class Interfactif21Batons {
 	static Scanner scanner;
 	final static String BORDER = "\t********************************************************";
 	final static String BORDER_BLANK = "\t*                                                      *";
-final static String MARGE_LEFT="\n\t\t\t";
+	final static String MARGE_LEFT = "\n\t\t\t";
+	final static String CHOISE_1_OR_2="1-> oui ou 2-> non";
+	
 	public static void main(String[] args) {
 		boolean again;
 		affichageStart();
@@ -39,9 +41,8 @@ final static String MARGE_LEFT="\n\t\t\t";
 	}
 
 	/**
-	 * Menu
-	 * message client et récupération du nombre choisi 
-	 * suppression du nombre de batons choisis
+	 * Menu message client et récupération du nombre choisi suppression du nombre de
+	 * batons choisis
 	 */
 	static public void menu() {
 		while (true) {
@@ -67,8 +68,6 @@ final static String MARGE_LEFT="\n\t\t\t";
 		}
 
 	}
-
-
 
 	/**
 	 * retourne le chiffre utilisateur et remonte l'exception
@@ -97,7 +96,8 @@ final static String MARGE_LEFT="\n\t\t\t";
 	}
 
 	/**
-	 * compte le nombre de batons dans le tableau 
+	 * compte le nombre de batons dans le tableau
+	 * 
 	 * @return un chiffre
 	 */
 	static public int searchBaton() {
@@ -164,8 +164,6 @@ final static String MARGE_LEFT="\n\t\t\t";
 		afficheMessageDeleteIA(nb);
 	}
 
-
-
 	/**
 	 * fin de partie perdant --> (utilisateur)
 	 * 
@@ -173,13 +171,13 @@ final static String MARGE_LEFT="\n\t\t\t";
 	 */
 	static public boolean gameOver() {
 		affichageLooser();
-		if(looserCount==5) {
+		if (looserCount == 5) {
 			return false;
 		}
 //		reponse client pour refaire le jeu
 		while (true) {
 			try {
-				System.out.println(" votre réponse : \n");
+				System.out.println(" votre réponse : "+CHOISE_1_OR_2);
 				scanner = new Scanner(System.in);
 				int reponse = scanner.nextInt();
 				if (reponse == 1) {
@@ -210,7 +208,7 @@ final static String MARGE_LEFT="\n\t\t\t";
 		System.out.println(BORDER_BLANK);
 		System.out.println(BORDER);
 	}
-	
+
 	/**
 	 * indique le choix de battonnet possible à enlever
 	 * 
@@ -225,7 +223,7 @@ final static String MARGE_LEFT="\n\t\t\t";
 		}
 		System.out.print(" Combien de batonnet enlevez-vous ?\t");
 	}
-	
+
 	/**
 	 * affichage du nombre de baton pris par l'IA
 	 * 
@@ -234,7 +232,7 @@ final static String MARGE_LEFT="\n\t\t\t";
 	static public void afficheMessageDeleteIA(int nb) {
 		System.out.println("\tJ'ai retiré " + nb + " bâtonnet(s)");
 	}
-	
+
 	/**
 	 * affichage des batonnets et du nombre en chiffres
 	 */
@@ -242,51 +240,52 @@ final static String MARGE_LEFT="\n\t\t\t";
 		for (String n : baton21) {
 			System.out.print(n);
 		}
-		System.out.print("\t"+searchBaton());
+		System.out.print("\t" + searchBaton());
 	}
+
 	/**
 	 * affichage à la 5 partie perdue
 	 */
 	static public void affichageLooser() {
 		switch (++looserCount) {
 		case 1:
-			System.out.println("\n"+BORDER);
+			System.out.println("\n" + BORDER);
 			System.out.println(BORDER_BLANK);
 
-			System.out
-					.println(MARGE_LEFT+"1 ère défaite"+MARGE_LEFT+" d'une longue série ..."+MARGE_LEFT+"envie de me défier ? "+MARGE_LEFT+" 1-> oui ou 2-> non");
+			System.out.println(MARGE_LEFT + "1 ère défaite" + MARGE_LEFT + "d'une longue série." + MARGE_LEFT
+					+ "envie de me défier ? " + MARGE_LEFT + CHOISE_1_OR_2);
 			System.out.println(BORDER_BLANK);
 			System.out.println(BORDER);
 			break;
 		case 2:
-			System.out.println("\n"+BORDER);
+			System.out.println("\n" + BORDER);
 			System.out.println(BORDER_BLANK);
-			System.out.println(
-					MARGE_LEFT+"2e défaite"+MARGE_LEFT+" cela commence à devenir une habitude ..."+MARGE_LEFT+"oses tu me défier encore ?"+MARGE_LEFT+" 1-> oui ou 2-> non");
+			System.out.println(MARGE_LEFT + "2e défaite" + MARGE_LEFT + "cela commence à devenir une habitude."
+					+ MARGE_LEFT + "oses tu me défier encore ?" + MARGE_LEFT + CHOISE_1_OR_2);
 			System.out.println(BORDER_BLANK);
 			System.out.println(BORDER);
 			break;
 		case 3:
-			System.out.println("\n"+BORDER);
+			System.out.println("\n" + BORDER);
 			System.out.println(BORDER_BLANK);
-			System.out.println(
-					MARGE_LEFT+"3e défaite"+MARGE_LEFT+" on parle plus d'habitude mais de coutume ..."+MARGE_LEFT+"je n'ose plus te poser la question ?3"+MARGE_LEFT+" 1-> oui ou 2-> non");
+			System.out.println(MARGE_LEFT + "3e défaite" + MARGE_LEFT + "on parle plus d'habitude mais de coutume."
+					+ MARGE_LEFT + "je n'ose plus te poser la question ?" + MARGE_LEFT + CHOISE_1_OR_2);
 			System.out.println(BORDER_BLANK);
 			System.out.println(BORDER);
 			break;
 		case 4:
-			System.out.println("\n"+BORDER);
+			System.out.println("\n" + BORDER);
 			System.out.println(BORDER_BLANK);
-			System.out.println(MARGE_LEFT+"looser "+MARGE_LEFT+"une dernière chance ?"+MARGE_LEFT+" 1-> oui ou 2-> non");
+			System.out.println(
+					MARGE_LEFT + "looser " + MARGE_LEFT + "une dernière chance ?" + MARGE_LEFT + CHOISE_1_OR_2);
 			System.out.println(BORDER_BLANK);
 			System.out.println(BORDER);
 			break;
 		case 5:
 		default:
-			System.out.println(
-					MARGE_LEFT+"QI inférieur à mon programme "
-					+ MARGE_LEFT+"qui d'ailleurs ne laisse aucune chance de gagner."
-					+ MARGE_LEFT+"Comme disait Michel Malinovsky : seul la victoire est jolie\n\n");
+			System.out.println(MARGE_LEFT + MARGE_LEFT + "QI inférieur à mon programme " + MARGE_LEFT
+					+ "qui d'ailleurs ne laisse aucune chance de gagner." + MARGE_LEFT
+					+ "Comme disait Michel Malinovsky : seul la victoire est jolie\n\n");
 			System.out.println(BORDER);
 			System.out.println(BORDER_BLANK);
 			System.out.println("\t*                        LOOSER                        *");
