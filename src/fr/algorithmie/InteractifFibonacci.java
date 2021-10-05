@@ -44,7 +44,7 @@ static int result;
 
 	public static double fibonacciSuiteRecursif(int nb, double fib1, double fib2) {
 		if (nb < 0) {
-			return 1L;
+			return 1;
 		}
 		if (fib1 == 0) {
 			System.out.println(fib1 + "\n" + fib2);
