@@ -3,11 +3,12 @@ package fr.algorithmie;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-interface Calculator {void calc(int op);};
+interface Calculator {void calc(int op);}
+
 public class InteractifTableMult {
 	static Scanner scanner;
 	static int[] multiTabs = {1,2,3,4,5,6,7,8,9,10};
-	static Calculator printTableMulti= (int x)->{for(int m:multiTabs){System.out.println(" table "+ x +" X "+m+" = "+m*x);};};
+	static Calculator printTableMulti= (int x)->{for(int m:multiTabs){System.out.println(" table "+ x +" X "+m+" = "+m*x);}};
 	
 	public static void main(String[] args) {
 		int nb;
