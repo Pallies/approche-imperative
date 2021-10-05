@@ -4,12 +4,12 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class InteractifTantQue {
-
+	static Scanner scanner;
 	public static void main(String[] args) {
 		while (true) {
-			Scanner scanner = new Scanner(System.in);
-			System.out.println("Veuillez entrez un chiffre :");
 			try {
+				scanner = new Scanner(System.in);
+				System.out.println("Veuillez entrez un chiffre :");
 				int nb = scanner.nextInt();
 				System.out.println("Votre chiffre est le : " + nb);
 				break;
