@@ -16,11 +16,10 @@ public class FabriquerMur {
 		verifier(1, 4, 12, false);
 		verifier(3, 1, 7, true);
 		verifier(1, 1, 7, false);
-
 	}
 
 	static boolean fabriquerMur(int nbSmall, int nbBig, int longueur) {
-		return nbBig*5+nbSmall*1-longueur >=0;
+		return nbBig*5+nbSmall-longueur >=0;
 	}
 
 	private static void verifier(int nbSmall, int nbBig, int longueur, boolean b) {
@@ -28,5 +27,4 @@ public class FabriquerMur {
 			System.err.println("Test (" + nbSmall + ", " + nbBig + ", " + longueur + ") NON passant.");
 		}
 	}
-
 }
