@@ -14,7 +14,7 @@ public class AffichageIdentite {
 
 /**
  * création d'une class User
- * réécriture de la méthod toString()
+ * réécriture de la méthod toString().
  * @author yvan
  *
  */
