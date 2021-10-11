@@ -9,8 +9,8 @@ static int result;
 	public static void main(String[] args) {
 
 //		fibonacciSuite(100);
-//		fibonacciRecursif(10, 0, 1);
-
+//		fibonacciSuiteRecursif(100, 0, 1);
+//		System.out.println(fibonacciRecursifRank(15));
 		try {
 //				entrée clavier
 			scanner = new Scanner(System.in);
@@ -55,11 +55,11 @@ static int result;
 	}
 
 // récusivité problème de convertion int long double ???
-//	public static double fibonacciRecursifRank(int nb) {
-//		if (nb == 1 || nb == 0) {
-//			return 1D;
-//		}
-//	return fibonacciRecursifRank(nb - 1) + fibonacciRecursifRank(nb - 2);
-//	}
+	public static double fibonacciRecursifRank(int nb) {
+		if (nb == 1 || nb == 0) {
+			return 1;
+		}
+	return fibonacciRecursifRank(nb - 1) + fibonacciRecursifRank(nb - 2);
+	}
 
 }
